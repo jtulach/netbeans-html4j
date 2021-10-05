@@ -3,13 +3,12 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "org.netbeans.html:html4j-maven-plugin:1.7.1"
+        classpath "org.netbeans.html:html4j-maven-plugin:1.7.2"
         classpath "org.frgaal:compiler-gradle-plugin:15.0.0"
     }
 }
 
 plugins {
-    id "me.tatarka.retrolambda" version "3.7.1"
     id 'org.openjfx.javafxplugin' version '0.0.9' apply false
 }
 
@@ -46,23 +45,23 @@ dependencies {
     compile project(":api")
 //    compile project(":shared")
 //    compile project(":micronaut-react")
-    compile "org.netbeans.html:net.java.html.boot:1.7.1"
-    compile "org.netbeans.html:net.java.html.json:1.7.1"
+    compile "org.netbeans.html:net.java.html.boot:1.7.2"
+    compile "org.netbeans.html:net.java.html.json:1.7.2"
     compile "com.dukescript.api:javafx.base:8.60.11"
     compile "com.dukescript.api:javafx.beaninfo:0.6"
     compileOnly "org.netbeans.api:org-openide-util-lookup:RELEASE120-u1"
     annotationProcessor "org.netbeans.api:org-openide-util-lookup:RELEASE120-u1"
     annotationProcessor "com.dukescript.api:javafx.beaninfo:0.6"
-    annotationProcessor "org.netbeans.html:net.java.html.boot:1.7.1"
-    annotationProcessor "org.netbeans.html:net.java.html.json:1.7.1"
+    annotationProcessor "org.netbeans.html:net.java.html.boot:1.7.2"
+    annotationProcessor "org.netbeans.html:net.java.html.json:1.7.2"
     annotationProcessor project(":api")
     testCompile "com.dukescript.api:junit-browser-runner:1.0"
-    testRuntime "org.netbeans.html:net.java.html.boot.fx:1.7.1"
-    testAnnotationProcessor "org.netbeans.html:net.java.html.boot:1.7.1"
+    testRuntime "org.netbeans.html:net.java.html.boot.fx:1.7.2"
+    testAnnotationProcessor "org.netbeans.html:net.java.html.boot:1.7.2"
 }
 
 task copyReactResources(type: Copy) {
-    from 'src/main/resources' into 'build/retrolambda/main/';
+    from 'src/main/resources' into 'build/classes/main/';
 }
 
 compileJava.dependsOn(copyReactResources);

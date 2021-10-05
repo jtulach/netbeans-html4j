@@ -30,10 +30,10 @@ javafx {
 
 dependencies {
     compile commonProject
-    compile "org.netbeans.html:net.java.html.boot:1.7.1"
-    runtime "org.netbeans.html:net.java.html.boot.fx:1.7.1"
-    runtime "org.netbeans.html:xhr4j:1.7.1"
+    compile "org.netbeans.html:net.java.html.boot:1.7.2"
+    runtime "org.netbeans.html:net.java.html.boot.fx:1.7.2"
+    runtime "org.netbeans.html:xhr4j:1.7.2"
     testCompile "com.dukescript.api:junit-browser-runner:1.0"
-    testRuntime "org.netbeans.html:net.java.html.boot.fx:1.7.1"
-    testAnnotationProcessor "org.netbeans.html:net.java.html.boot:1.7.1"
+    testRuntime "org.netbeans.html:net.java.html.boot.fx:1.7.2"
+    testAnnotationProcessor "org.netbeans.html:net.java.html.boot:1.7.2"
 }

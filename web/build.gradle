@@ -1,5 +1,5 @@
 buildscript {
-    ext.bck2brwsr_version = '0.31'
+    ext.bck2brwsr_version = '0.54'
 
     repositories {
         mavenCentral()

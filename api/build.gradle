@@ -28,7 +28,7 @@ dependencies {
     compile "com.dukescript.api:javafx.base:8.60.11"
     compile "com.dukescript.api:javafx.beaninfo:0.6"
     compileOnly "org.netbeans.api:org-openide-util-lookup:RELEASE120-u1"
-    compileOnly "org.apidesign.bck2brwsr:core:0.32"
+    compileOnly "org.apidesign.bck2brwsr:core:0.54"
     annotationProcessor "org.netbeans.html:net.java.html.boot:1.7.1"
     annotationProcessor "org.netbeans.html:net.java.html.json:1.7.1"
     annotationProcessor "org.netbeans.api:org-openide-util-lookup:RELEASE120-u1"
