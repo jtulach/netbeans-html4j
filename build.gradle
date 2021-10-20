@@ -60,8 +60,8 @@ dependencies {
     testAnnotationProcessor "org.netbeans.html:net.java.html.boot:1.7.2"
 }
 
-task copyReactResources(type: Copy) {
-    from 'src/main/resources' into 'build/classes/main/';
+task copyFluentResources(type: Copy) {
+    from 'src/main/resources' into 'build/classes/java/main/';
 }
 
-compileJava.dependsOn(copyReactResources);
+compileJava.dependsOn(copyFluentResources);
