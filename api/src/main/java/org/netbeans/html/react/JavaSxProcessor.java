@@ -532,7 +532,9 @@ public class JavaSxProcessor extends AbstractProcessor {
                         String sep1 = "";
                         for (int i = 0; i < fn.getParameters().size(); i++) {
                             prologue2.append(sep1);
-                            prologue2.append("(").append(fn.getParameters().get(i).asType()).append(") obj[").append(i).append("]");
+                            TypeMirror type = fn.getParameters().get(i).asType();
+                            type = processingEnv.getTypeUtils().erasure(type);
+                            prologue2.append("(").append(type).append(") obj[").append(i).append("]");
                             sep1 = ", ";
                         }
                         prologue2.append(");\n");
