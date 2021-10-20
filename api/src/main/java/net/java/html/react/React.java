@@ -77,20 +77,28 @@ public class React {
         } else {
             rawChilden = null;
         }
+        boolean searchForComponent = false;
         if (type instanceof String) {
             Object real = FACTORIES.get(type);
             if (real != null) {
                 type = real;
+            } else {
+                if (((String) type).length() > 0) {
+                    searchForComponent = Character.isUpperCase(((String) type).charAt(0));
+                }
             }
         }
-        Object js = createElement0(type, rawModel, rawChilden);
+        Object js = createElement0(type, searchForComponent, rawModel, rawChilden);
         return new Element(js, type, attrs, children);
     }
 
-    @JavaScriptBody(args = { "type", "model", "children" }, body = """
+    @JavaScriptBody(args = { "type", "searchViaEval", "model", "children" }, body = """
+        if (searchViaEval) {
+            type = (0 || eval)(type);
+        }
         return React.createElement(type, model, children);
     """)
-    private static native Object createElement0(Object type, Object model, Object... children);
+    private static native Object createElement0(Object type, boolean searchViaEval, Object model, Object[] children);
 
     public static Object register(String name, ComponentFactory cf) {
         Object jsClass = register0(name, cf);
