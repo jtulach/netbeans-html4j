@@ -48,6 +48,10 @@ public final class OnPageLoad {
                 TicTacToe3.onPageLoad();
                 code = "TicTacToe3.java";
                 break;
+            case "calendar":
+                FluentCalendar.onPageLoad();
+                code = "FluentCalendar.java";
+                break;
             default:
                 LikeButton.onPageLoad();
                 code = "LikeButton.java";

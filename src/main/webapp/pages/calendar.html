@@ -1,0 +1,58 @@
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>React for Java - Get the Code</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="ttt.css">
+</head>
+
+<body>
+  <h2>Use Existing React.js Components from Java!</h2>
+
+  <div id="calendar"></div>
+
+  <script src='bck2brwsr.js'></script>
+  <script>
+  var vm = bck2brwsr('main.js');
+  vm.loadClass('cz.xelfi.demo.react4jdemo.BrowserMain', function(mainClass) {
+    mainClass.invoke('main', [ 'calendar' ]);
+  });
+  </script>
+  
+<h2>What is this?</h2>
+
+<p>
+This page shows how to mix classical <a target="_blank" href="https://developer.microsoft.com/en-us/fluentui">Fluent UI React components</a> 
+in your React4Java application. The <a target="_blank" href="https://developer.microsoft.com/en-us/fluentui#/controls/web/calendar">calendar comes from Fluent UI</a>
+library. The selected day header is rendered by overall Java application.
+<p>
+Continue to <a href="ttt99.html">next topic</a>...
+</p>
+
+<div id="codecontainer"></div>
+
+</body>
+
+</html>
