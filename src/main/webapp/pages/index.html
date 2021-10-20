@@ -31,7 +31,13 @@
 
     <div id="like_button_container"></div>
 
-    <!-- ${browser.bootstrap} -->
+    <script src='bck2brwsr.js'></script>
+    <script>
+    var vm = bck2brwsr('main.js');
+    vm.loadClass('cz.xelfi.demo.react4jdemo.BrowserMain', function(mainClass) {
+      mainClass.invoke('main');
+    });
+    </script>
     
     
     <h2>What is this?</h2>
