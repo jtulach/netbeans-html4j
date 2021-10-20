@@ -40,7 +40,7 @@ public class TicTacToe1 {
 
         @Override
         protected Element render() {
-            final String squareValue = "" + this.getProperty("value");
+            final String squareValue = "" + ((Number) this.getProperty("value")).intValue();
             return renderSquare(squareValue, () -> {
                 final String msg = "Clicked " + squareValue;
                 System.err.println(msg);
